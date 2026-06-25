@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Event Registration Form</h2>
+
+        <form action="/register" method="POST">
+
+            <label>Full Name</label>
+            <input type="text" name="fullname" required>
+
+            <label>Father's Name</label>
+            <input type="text" name="fathername" required>
+
+            <label>Mother's Name</label>
+            <input type="text" name="mothername" required>
+
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+
+            <label>Mobile Number</label>
+            <input type="tel" name="mobile" required>
+
+            <label>Alternate Mobile Number</label>
+            <input type="tel" name="altmobile">
+
+            <label>Age</label>
+            <input type="number" name="age" required>
+
+            <label>Gender</label>
+            <select name="gender" required>
+                <option value="">Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+
+            <label>Date of Birth</label>
+            <input type="date" name="dob" required>
+
+            <label>College Name</label>
+            <input type="text" name="college" required>
+
+            <label>University Name</label>
+            <input type="text" name="university" required>
+
+            <label>Branch / Department</label>
+            <input type="text" name="branch" required>
+
+            <label>Year of Study</label>
+            <input type="number" name="year" min="1" max="5" required>
+
+            <label>Roll Number</label>
+            <input type="text" name="rollno" required>
+
+            <label>Address</label>
+            <textarea name="address" rows="3" required></textarea>
+
+            <label>City</label>
+            <input type="text" name="city" required>
+
+            <label>District</label>
+            <input type="text" name="district" required>
+
+            <label>State</label>
+            <input type="text" name="state" required>
+
+            <label>Pincode</label>
+            <input type="text" name="pincode" required>
+
+            <label>Event Name</label>
+            <input type="text" name="eventname" required>
+
+            <label>Event Category</label>
+            <select name="eventcategory" required>
+                <option value="">Select Category</option>
+                <option>Technical</option>
+                <option>Cultural</option>
+                <option>Sports</option>
+                <option>Workshop</option>
+                <option>Seminar</option>
+            </select>
+
+            <label>Skills</label>
+            <input type="text" name="skills">
+
+            
+            <label>Emergency Contact Number</label>
+            <input type="tel" name="emergencynumber" required>
+
+            <label>Food Preference</label>
+            <select name="foodpreference">
+                <option value="">Select Preference</option>
+                <option>Vegetarian</option>
+                <option>Non-Vegetarian</option>
+                <option>Vegan</option>
+            </select>
+
+            <input type="submit" value="Register">
+
+        </form>
+    </div>
+
+</body>
+
+</html>
