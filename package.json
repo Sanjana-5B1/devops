@@ -1,0 +1,28 @@
+{
+  "name": "24wh1a05b1_p.sanjana",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "sanjana",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.3.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.5"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanjana-5B1/devops.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sanjana-5B1/devops/issues"
+  },
+  "homepage": "https://github.com/Sanjana-5B1/devops#readme",
+  "description": ""
+}
