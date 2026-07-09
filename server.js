@@ -1,48 +1,41 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
-app.post("/register",(req,res)=>{
+// Serve HTML, CSS and JS files
+app.use(express.static(__dirname));
 
-    const registration=req.body;
+// Home page
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "index.html"));
+});
 
-    console.log("\n==============================");
-    console.log("REGISTRATION RECEIVED");
-    console.log("==============================");
+// Register API
+app.post("/register", (req, res) => {
 
-    console.log("First Name :",registration.firstname);
-    console.log("Last Name :",registration.lastname);
-    console.log("Email :",registration.email);
-    console.log("Phone :",registration.phone);
-    console.log("DOB :",registration.dob);
-    console.log("Blood Group :",registration.bloodgroup);
-    console.log("City :",registration.city);
-    console.log("State :",registration.state);
-    console.log("Pincode :",registration.pincode);
-    console.log("Emergency Contact :",registration.emergency_contact);
-    console.log("Gender :",registration.gender);
-    console.log("Address :",registration.address);
+    const registration = req.body;
 
-    console.log("==============================\n");
+    console.log("\n========================================");
+    console.log("BANGLE MAKING EVENT REGISTRATION RECEIVED");
+    console.log("========================================");
+    console.log(registration);
 
-    const registrationId=Math.floor(Math.random()*100000);
+    const registrationId = Math.floor(Math.random() * 100000);
 
     res.json({
-
-        message:"Registration Successful",
-
-        registrationId:registrationId
-
+        message: "Registration Successful",
+        registrationId: registrationId
     });
 
 });
 
-app.listen(3000,()=>{
+const PORT = process.env.PORT || 3000;
 
-    console.log("Registration Microservice Running On Port 3000");
-
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
